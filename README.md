@@ -3,17 +3,19 @@
 
 <!-- badges: start -->
 
+[![R-CMD-check](https://github.com/ismayc/steves/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ismayc/steves/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-A tidy snapshot of every episode of the public-television travel series
-*Rick Steves’ Europe* (2000–2025), enriched for teaching introductory
-data analysis. One row per episode, 38 columns of identity, editorial
-classification, geography, air dates, IMDB ratings, country flags,
-thumbnails, and canonical best-of summaries.
+This package is an ode to a wonderfully informative and fun host in Rick
+Steves. It’s a tidy snapshot of every episode of the public-television
+travel series *Rick Steves’ Europe* (2000–2025), enriched for teaching
+introductory data analysis. One row per episode, 38 columns of identity,
+editorial classification, geography, air dates, IMDB ratings, country
+flags, thumbnails, and canonical best-of summaries.
 
-Built in the spirit of [moderndive](https://moderndive.com/) — every
-column is a candidate for `dplyr::filter()`, `ggplot2::geom_*()`, or
-`leaflet::addMarkers()`.
+Built in the spirit of [ModernDive](https://moderndive.com/v2) — almost
+every column is a candidate for `dplyr::filter()`, `ggplot2::geom_*()`,
+or `leaflet::addMarkers()`.
 
 ## Installation
 
@@ -33,32 +35,25 @@ dim(episodes)
 
 ``` r
 library(dplyr)
-#> 
-#> Attaching package: 'dplyr'
-#> The following objects are masked from 'package:stats':
-#> 
-#>     filter, lag
-#> The following objects are masked from 'package:base':
-#> 
-#>     intersect, setdiff, setequal, union
 
 episodes |>
   count(primary_country, sort = TRUE) |>
   head(10)
-#> # A tibble: 10 × 2
-#>    primary_country     n
-#>    <chr>           <int>
-#>  1 Italy              29
-#>  2 Multiple           20
-#>  3 United Kingdom     20
-#>  4 France             15
-#>  5 Germany             9
-#>  6 Spain               9
-#>  7 Turkey              6
-#>  8 Austria             4
-#>  9 Greece              4
-#> 10 Portugal            4
 ```
+
+    #> # A tibble: 10 × 2
+    #>    primary_country     n
+    #>    <chr>           <int>
+    #>  1 Italy              29
+    #>  2 Multiple           20
+    #>  3 United Kingdom     20
+    #>  4 France             15
+    #>  5 Germany             9
+    #>  6 Spain               9
+    #>  7 Turkey              6
+    #>  8 Austria             4
+    #>  9 Greece              4
+    #> 10 Portugal            4
 
 ``` r
 episodes |>

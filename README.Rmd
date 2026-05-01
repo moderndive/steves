@@ -14,6 +14,7 @@ knitr::opts_chunk$set(
 # steves <img src="man/figures/logo.png" align="right" height="139" alt="steves package hex sticker" />
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/ismayc/steves/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ismayc/steves/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 This package is an ode to a wonderfully informative and fun host in Rick Steves. It's a tidy snapshot of every episode of the public-television travel series
@@ -41,7 +42,7 @@ library(steves)
 dim(episodes)
 ```
 
-```{r glimpse, eval=FALSE}
+```{r glimpse-show, eval=FALSE}
 library(dplyr)
 
 episodes |>
@@ -49,7 +50,7 @@ episodes |>
   head(10)
 ```
 
-```{r glimpse, eval = requireNamespace("dplyr", quietly = TRUE), echo=FALSE}
+```{r glimpse-run, eval = requireNamespace("dplyr", quietly = TRUE), echo=FALSE}
 suppressPackageStartupMessages(library(dplyr))
 
 episodes |>
