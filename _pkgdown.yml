@@ -1,0 +1,81 @@
+url: https://ismayc.github.io/steves/
+
+template:
+  bootstrap: 5
+  bslib:
+    primary: "#1B3A6B"         # Rick Steves deep navy
+    secondary: "#FFC72C"        # warm yellow / gold
+    success: "#1B3A6B"
+    info: "#5DA9E9"             # lighter sky blue
+    warning: "#FFC72C"
+    danger: "#C0392B"
+    link-color: "#1B3A6B"
+    body-bg: "#FFFFFF"          # white
+    body-color: "#1A1A1A"
+    border-color: "#D6E4F0"     # pale blue-gray
+    border-radius: "0.4rem"
+    btn-border-radius: "0.4rem"
+    code-color: "#1B3A6B"
+    pre-bg: "#F5F8FC"           # very pale blue
+    headings-color: "#1B3A6B"
+    base_font: {google: "Source Sans 3"}
+    heading_font: {google: "Playfair Display"}
+    code_font: {google: "JetBrains Mono"}
+  includes:
+    in_header: |
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+home:
+  title: steves — Rick Steves' Europe episodes for data analysis
+  description: >
+    A tidy, lightly enriched table of every Rick Steves' Europe episode
+    (2000-2025): IMDB ratings, geocoded destinations, country flags,
+    thumbnails, and best-of summaries. One row per episode, ready to
+    `dplyr::filter()`, `ggplot2::geom_*()`, and `leaflet::addMarkers()`.
+  links:
+    - text: Watch Rick Steves' Europe
+      href: https://www.ricksteves.com/watch-read-listen/video/tv-show
+    - text: IMDB page
+      href: https://www.imdb.com/title/tt1243815/
+
+navbar:
+  bg: primary
+  type: dark
+  structure:
+    left:  [intro, reference, articles, news]
+    right: [search, github]
+  components:
+    intro:
+      text: Get started
+      href: articles/steves.html
+    reference:
+      text: Reference
+      href: reference/index.html
+    articles:
+      text: Articles
+      menu:
+      - text: Mapping the show
+        href: articles/mapping-the-show.html
+
+reference:
+  - title: Datasets
+    desc: >
+      The package exports a single tibble: one row per episode, 38 columns
+      spanning identity, editorial fields, geography, dates, IMDB ratings,
+      and canonical "best-of" content.
+    contents:
+      - episodes
+
+footer:
+  structure:
+    left:  developed_by
+    right: [package, built_with]
+  components:
+    package: |
+      Source: <https://github.com/ismayc/steves>.
+      Episode metadata © Rick Steves' Europe; ratings © IMDB.com, Inc.,
+      used under the IMDB non-commercial license.
+
+development:
+  mode: auto

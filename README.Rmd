@@ -1,0 +1,102 @@
+---
+output: github_document
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# steves <img src="man/figures/logo.png" align="right" height="139" alt="steves package hex sticker" />
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+This package is an ode to a wonderfully informative and fun host in Rick Steves. It's a tidy snapshot of every episode of the public-television travel series
+*Rick Steves' Europe* (2000–2025), enriched for teaching introductory data
+analysis. One row per episode, 38 columns of identity, editorial
+classification, geography, air dates, IMDB ratings, country flags,
+thumbnails, and canonical best-of summaries.
+
+Built in the spirit of [ModernDive](https://moderndive.com/v2) — almost every column
+is a candidate for `dplyr::filter()`, `ggplot2::geom_*()`, or
+`leaflet::addMarkers()`.
+
+## Installation
+
+```r
+# install.packages("pak")
+pak::pak("ismayc/steves")
+```
+
+## Usage
+
+```{r setup}
+library(steves)
+
+dim(episodes)
+```
+
+```{r glimpse, eval=FALSE}
+library(dplyr)
+
+episodes |>
+  count(primary_country, sort = TRUE) |>
+  head(10)
+```
+
+```{r glimpse, eval = requireNamespace("dplyr", quietly = TRUE), echo=FALSE}
+suppressPackageStartupMessages(library(dplyr))
+
+episodes |>
+  count(primary_country, sort = TRUE) |>
+  head(10)
+```
+
+```{r ratings, eval = requireNamespace("dplyr", quietly = TRUE)}
+episodes |>
+  filter(!imdb_low_votes) |>
+  arrange(desc(imdb_rating_shrunk)) |>
+  select(season, title, primary_country, flag,
+         imdb_rating, imdb_votes, imdb_rating_shrunk) |>
+  head(10)
+```
+
+```{r ggplot, eval = requireNamespace("ggplot2", quietly = TRUE), fig.height = 3.5, fig.alt = "Scatter plot of Bayesian-shrunk IMDB ratings against original air date for every Rick Steves' Europe episode, point size proportional to vote count."}
+library(ggplot2)
+
+ggplot(episodes, aes(x = original_air_date, y = imdb_rating_shrunk)) +
+  geom_point(aes(size = imdb_votes), alpha = 0.6, color = "#1B3A6B") +
+  scale_size_continuous(range = c(1, 5)) +
+  labs(title = "Episode ratings over the show's run",
+       subtitle = "Bayesian-shrunk IMDB rating; size = number of votes",
+       x = NULL, y = "IMDB rating (shrunk)") +
+  theme_minimal()
+```
+
+## Provenance
+
+Editorial fields (`title`, `synopsis`, `theme_tags`, `region`,
+`primary_destination`, `episode_type`, `is_retired`) are curated. Everything
+else is built from public sources and joined back on
+`(season, episode_in_season)` or on the IMDB title id `tt1243815`.
+
+| Source | Fields |
+| --- | --- |
+| [IMDB datasets](https://datasets.imdbws.com/) (non-commercial) | `imdb_*` |
+| [OSM/Nominatim via tidygeocoder](https://CRAN.R-project.org/package=tidygeocoder) | `lat`, `long`, `geo_match` |
+| [`countrycode`](https://CRAN.R-project.org/package=countrycode) | `iso2`, `flag` |
+| [TVmaze API](https://api.tvmaze.com/shows/9872) | `tvmaze_*` |
+| [Wikipedia](https://en.wikipedia.org/wiki/Rick_Steves%27_Europe) episode tables | (cross-reference) |
+| `ricksteves.com` Open Graph tags | `image_url`, `best_summary` |
+
+## License
+
+MIT for the package code and tidied data scaffolding. IMDB rating data is
+© IMDB.com, Inc. and used under their non-commercial license. Episode
+images and summaries are © Rick Steves' Europe and used under fair-use
+for research and education.

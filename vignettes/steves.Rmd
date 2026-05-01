@@ -1,0 +1,109 @@
+---
+title: "Get started with steves"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Get started with steves}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>",
+                      fig.width = 7, fig.height = 4)
+```
+
+```{r setup}
+library(steves)
+library(dplyr)
+library(ggplot2)
+```
+
+## What's in `episodes`?
+
+```{r}
+glimpse(episodes)
+```
+
+One row per episode, 13 seasons, 159 episodes spanning 2000–2025. Most
+columns fall into a few groups:
+
+- **Identity**: `overall_episode`, `season`, `episode_in_season`,
+  `season_episode_code`.
+- **Editorial**: `title`, `synopsis`, `theme_tags`, `region`,
+  `primary_destination`, `episode_type`, `is_retired`.
+- **Geography**: `primary_country`, `all_countries`, `iso2`, `flag`,
+  `lat`, `long`, `geo_match`.
+- **Dates**: `original_air_date`, `air_year`, `air_month`, `air_weekday`,
+  plus derived gap and span fields.
+- **IMDB**: `imdb_rating`, `imdb_votes`, `imdb_rating_shrunk`,
+  `imdb_low_votes`, `imdb_url`, `imdb_tconst`.
+- **Canonical bests**: `image_url`, `best_summary`, `best_runtime`, plus
+  `*_source` provenance flags.
+
+## How often does Rick Steves visit each country?
+
+```{r}
+episodes |>
+  count(primary_country, flag, sort = TRUE) |>
+  head(10)
+```
+
+```{r country-bar, fig.height = 5, fig.alt = "Horizontal bar chart of the number of Rick Steves' Europe episodes set in each country, sorted from most to fewest."}
+episodes |>
+  count(primary_country) |>
+  filter(primary_country != "Multiple") |>
+  mutate(primary_country = forcats::fct_reorder(primary_country, n)) |>
+  ggplot(aes(n, primary_country)) +
+  geom_col(fill = "#1B3A6B") +
+  labs(title = "Episodes per country",
+       x = "Episodes", y = NULL) +
+  theme_minimal()
+```
+
+## Are highly-rated episodes a particular kind of place?
+
+`imdb_rating_shrunk` pulls noisy ratings (some episodes have only 5 votes)
+toward the show mean. It is always populated, so it sorts cleanly.
+
+```{r}
+episodes |>
+  filter(!is.na(lat)) |>
+  group_by(region) |>
+  summarise(n = n(),
+            median_rating = median(imdb_rating_shrunk)) |>
+  arrange(desc(median_rating))
+```
+
+## Mapping the show
+
+`lat` and `long` are filled for ~93% of episodes. Compilation episodes
+("Travel Skills Special", "Why We Travel") are intentionally `NA` — there
+is no single coordinate.
+
+```{r leaflet, eval = requireNamespace("leaflet", quietly = TRUE)}
+library(leaflet)
+
+episodes |>
+  filter(!is.na(lat)) |>
+  leaflet() |>
+  addTiles() |>
+  addCircleMarkers(
+    ~long, ~lat,
+    radius = ~ pmax(3, imdb_rating_shrunk - 5),
+    popup  = ~ sprintf("<b>%s</b><br>%s %s<br>%s",
+                       title, flag, primary_country, best_summary),
+    color = "#1B3A6B", fillOpacity = 0.6, stroke = FALSE
+  )
+```
+
+## Production cadence
+
+```{r cadence, fig.alt = "Bar chart of episodes aired per calendar year, showing seasonal production cadence from 2000 to 2025."}
+episodes |>
+  count(air_year) |>
+  ggplot(aes(air_year, n)) +
+  geom_col(fill = "#FFC72C") +
+  labs(title = "Episodes aired per year",
+       x = NULL, y = "Episodes") +
+  theme_minimal()
+```
