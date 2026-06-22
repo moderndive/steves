@@ -7,6 +7,10 @@
 #' rest are derived from public sources and joined back on
 #' `(season, episode_in_season)` or on the IMDB title id.
 #'
+#' This dataset was compiled from public sources for teaching purposes and
+#' is not an official or verified Rick Steves' Europe dataset. It is shared
+#' with the permission of the Rick Steves' Europe team.
+#'
 #' @format A tibble with 159 rows and 38 columns:
 #' \describe{
 #'   \item{overall_episode}{Integer. Series-wide episode number, 1--159.}
@@ -73,6 +77,10 @@
 #' }
 #'
 #' @source
+#' Source: Rick Steves' Europe (compiled dataset). Compiled from public
+#' sources for teaching purposes; not an official or verified Rick Steves'
+#' Europe dataset.
+#'
 #' - Editorial fields curated from <https://www.ricksteves.com/>
 #' - IMDB ratings from <https://datasets.imdbws.com/> (non-commercial use).
 #' - Geocoding via OpenStreetMap Nominatim through the

@@ -1,6 +1,6 @@
 Package: steves
 Title: Rick Steves' Europe Episodes for Teaching Data Analysis
-Version: 0.1.0
+Version: 0.1.1
 Authors@R:
     person("Chester", "Ismay",
            email = "chester.ismay@gmail.com",
@@ -11,7 +11,9 @@ Description: Tidy snapshot of every episode of the public-television travel
     descriptive summaries. Designed as a companion dataset for introductory
     data analysis and visualization in the spirit of the 'moderndive'
     textbook: every row is an episode, every column is a candidate for a
-    plot or a join.
+    plot or a join. Compiled from public sources for teaching purposes; not
+    an official or verified 'Rick Steves' Europe' dataset, and shared with
+    the permission of the Rick Steves' Europe team.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

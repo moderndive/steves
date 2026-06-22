@@ -17,6 +17,16 @@ Built in the spirit of [ModernDive](https://moderndive.com/v2) — almost
 every column is a candidate for `dplyr::filter()`, `ggplot2::geom_*()`,
 or `leaflet::addMarkers()`.
 
+## Attribution
+
+> Source: Rick Steves’ Europe (compiled dataset).
+>
+> Note: This dataset was created from public sources for teaching purposes
+> and is not an official or verified Rick Steves’ Europe dataset.
+
+Used with the kind permission of the Rick Steves’ Europe team, in keeping
+with Rick’s long-standing commitment to education.
+
 ## Installation
 
 ``` r
@@ -115,3 +125,7 @@ MIT for the package code and tidied data scaffolding. IMDB rating data
 is © IMDB.com, Inc. and used under their non-commercial license. Episode
 images and summaries are © Rick Steves’ Europe and used under fair-use
 for research and education.
+
+This dataset is compiled from public sources for teaching purposes and is
+not an official or verified Rick Steves’ Europe dataset. It is shared with
+the permission of the Rick Steves’ Europe team.

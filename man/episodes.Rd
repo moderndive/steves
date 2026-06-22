@@ -71,6 +71,10 @@ as a secondary deep link or to call the TVmaze API.}
 }
 }
 \source{
+Source: Rick Steves' Europe (compiled dataset). Compiled from public
+sources for teaching purposes; not an official or verified Rick Steves'
+Europe dataset.
+
 \itemize{
 \item Editorial fields curated from \url{https://www.ricksteves.com/}
 \item IMDB ratings from \url{https://datasets.imdbws.com/} (non-commercial use).
@@ -91,6 +95,10 @@ Editorial fields (\code{title}, \code{synopsis}, \code{theme_tags}, \code{region
 \code{primary_destination}, \code{episode_type}, \code{is_retired}) are curated; the
 rest are derived from public sources and joined back on
 \verb{(season, episode_in_season)} or on the IMDB title id.
+
+This dataset was compiled from public sources for teaching purposes and
+is not an official or verified Rick Steves' Europe dataset. It is shared
+with the permission of the Rick Steves' Europe team.
 }
 \examples{
 library(steves)

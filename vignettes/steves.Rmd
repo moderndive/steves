@@ -18,6 +18,11 @@ library(dplyr)
 library(ggplot2)
 ```
 
+> Source: Rick Steves' Europe (compiled dataset). This dataset was created
+> from public sources for teaching purposes and is not an official or
+> verified Rick Steves' Europe dataset. It is shared with the permission of
+> the Rick Steves' Europe team.
+
 ## What's in `episodes`?
 
 ```{r}
