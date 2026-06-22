@@ -27,6 +27,10 @@ template:
     in_header: |
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  opengraph:
+    image:
+      src: https://moderndive.github.io/steves/reference/figures/og-image.png
+      alt: "steves R package — every Rick Steves' Europe episode as a tidy dataset, with the package hex sticker."
 home:
   title: steves — Rick Steves' Europe episodes for data analysis
   description: |
