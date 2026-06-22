@@ -12,11 +12,11 @@ join.
 
 Useful links:
 
-- <https://ismayc.github.io/steves/>
+- <https://moderndive.github.io/steves/>
 
-- <https://github.com/ismayc/steves>
+- <https://github.com/moderndive/steves>
 
-- Report bugs at <https://github.com/ismayc/steves/issues>
+- Report bugs at <https://github.com/moderndive/steves/issues>
 
 ## Author
 

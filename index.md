@@ -13,12 +13,23 @@ every column is a candidate for
 `ggplot2::geom_*()`, or
 [`leaflet::addMarkers()`](https://rstudio.github.io/leaflet/reference/map-layers.html).
 
+## Attribution
+
+> Source: Rick Steves’ Europe (compiled dataset).
+>
+> Note: This dataset was created from public sources for teaching
+> purposes and is not an official or verified Rick Steves’ Europe
+> dataset.
+
+Used with the kind permission of the Rick Steves’ Europe team, in
+keeping with Rick’s long-standing commitment to education.
+
 ## Installation
 
 ``` r
 
 # install.packages("pak")
-pak::pak("ismayc/steves")
+pak::pak("moderndive/steves")
 ```
 
 ## Usage
@@ -120,3 +131,7 @@ MIT for the package code and tidied data scaffolding. IMDB rating data
 is © IMDB.com, Inc. and used under their non-commercial license. Episode
 images and summaries are © Rick Steves’ Europe and used under fair-use
 for research and education.
+
+This dataset is compiled from public sources for teaching purposes and
+is not an official or verified Rick Steves’ Europe dataset. It is shared
+with the permission of the Rick Steves’ Europe team.

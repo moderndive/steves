@@ -7,6 +7,10 @@ Europe* (2000-2025), 159 episodes across 13 seasons. Editorial fields
 public sources and joined back on `(season, episode_in_season)` or on
 the IMDB title id.
 
+This dataset was compiled from public sources for teaching purposes and
+is not an official or verified Rick Steves' Europe dataset. It is shared
+with the permission of the Rick Steves' Europe team.
+
 ## Usage
 
 ``` r
@@ -176,6 +180,10 @@ A tibble with 159 rows and 38 columns:
   to call the TVmaze API.
 
 ## Source
+
+Source: Rick Steves' Europe (compiled dataset). Compiled from public
+sources for teaching purposes; not an official or verified Rick Steves'
+Europe dataset.
 
 - Editorial fields curated from <https://www.ricksteves.com/>
 

@@ -13,12 +13,23 @@ every column is a candidate for
 `ggplot2::geom_*()`, or
 [`leaflet::addMarkers()`](https://rstudio.github.io/leaflet/reference/map-layers.html).
 
+## Attribution
+
+> Source: Rick Steves’ Europe (compiled dataset).
+>
+> Note: This dataset was created from public sources for teaching
+> purposes and is not an official or verified Rick Steves’ Europe
+> dataset.
+
+Used with the kind permission of the Rick Steves’ Europe team, in
+keeping with Rick’s long-standing commitment to education.
+
 ## Installation
 
 ``` r
 
 # install.packages("pak")
-pak::pak("ismayc/steves")
+pak::pak("moderndive/steves")
 ```
 
 ## Usage
@@ -121,6 +132,10 @@ is © IMDB.com, Inc. and used under their non-commercial license. Episode
 images and summaries are © Rick Steves’ Europe and used under fair-use
 for research and education.
 
+This dataset is compiled from public sources for teaching purposes and
+is not an official or verified Rick Steves’ Europe dataset. It is shared
+with the permission of the Rick Steves’ Europe team.
+
 # Package index
 
 ## Datasets
@@ -129,14 +144,14 @@ The package exports a single tibble: one row per episode, 38 columns
 spanning identity, editorial fields, geography, dates, IMDB ratings, and
 canonical “best-of” content.
 
-- [`episodes`](https://ismayc.github.io/steves/reference/episodes.md) :
-  Rick Steves' Europe episodes
+- [`episodes`](https://moderndive.github.io/steves/reference/episodes.md)
+  : Rick Steves' Europe episodes
 
 # Articles
 
 ### All vignettes
 
 - [Mapping the
-  show](https://ismayc.github.io/steves/articles/mapping-the-show.md):
+  show](https://moderndive.github.io/steves/articles/mapping-the-show.md):
 - [Get started with
-  steves](https://ismayc.github.io/steves/articles/steves.md):
+  steves](https://moderndive.github.io/steves/articles/steves.md):
