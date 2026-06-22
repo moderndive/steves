@@ -6,11 +6,11 @@ W <- 1200L
 H <- 630L
 blue   <- "#1B3A6B"  # primary
 gold   <- "#FFC72C"  # secondary
-ltblue <- "#E8F0FA"
-sky    <- "#5DA9E9"
+dkgold <- "#B8860B"  # darker gold, legible on white
+ink    <- "#2A2A2A"  # body text
 
-# Canvas
-canvas <- image_blank(W, H, color = blue)
+# Canvas: white background (hex already carries a blue border)
+canvas <- image_blank(W, H, color = "#FFFFFF")
 
 # Hex sticker on the right, vertically centred
 hex   <- image_read("man/figures/logo.png")
@@ -26,11 +26,11 @@ mx <- 80L  # left margin
 canvas <- image_annotate(canvas, "R PACKAGE", gravity = "northwest",
                          location = sprintf("+%d+%d", mx, 96L),
                          size = 30, weight = 700, kerning = 8,
-                         color = gold, font = "Helvetica")
+                         color = dkgold, font = "Helvetica")
 canvas <- image_annotate(canvas, "steves", gravity = "northwest",
                          location = sprintf("+%d+%d", mx - 4L, 130L),
                          size = 150, weight = 700,
-                         color = "#FFFFFF", font = "Georgia")
+                         color = blue, font = "Georgia")
 # Gold rule under the wordmark
 canvas <- image_composite(
   canvas, image_blank(360L, 6L, color = gold),
@@ -40,12 +40,12 @@ canvas <- image_annotate(
   canvas,
   "Every Rick Steves' Europe episode,\nas a tidy dataset for teaching.",
   gravity = "northwest", location = sprintf("+%d+%d", mx, 350L),
-  size = 38, color = ltblue, font = "Helvetica"
+  size = 38, color = ink, font = "Helvetica"
 )
 canvas <- image_annotate(canvas, "159 episodes  ·  13 seasons  ·  2000–2025",
                          gravity = "northwest",
                          location = sprintf("+%d+%d", mx, 500L),
-                         size = 30, color = sky, font = "Helvetica")
+                         size = 30, color = blue, font = "Helvetica")
 
 image_write(canvas, "man/figures/og-image.png", format = "png")
 message("Wrote man/figures/og-image.png")

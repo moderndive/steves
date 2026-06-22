@@ -3,6 +3,7 @@
 
 <!-- badges: start -->
 
+[![CRAN status](https://www.r-pkg.org/badges/version/steves)](https://CRAN.R-project.org/package=steves)
 [![R-CMD-check](https://github.com/moderndive/steves/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/moderndive/steves/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
@@ -28,6 +29,14 @@ Used with the kind permission of the Rick Steves’ Europe team, in keeping
 with Rick’s long-standing commitment to education.
 
 ## Installation
+
+Install the released version from CRAN:
+
+``` r
+install.packages("steves")
+```
+
+Or the development version from GitHub:
 
 ``` r
 # install.packages("pak")

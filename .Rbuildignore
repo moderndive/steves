@@ -9,3 +9,9 @@
 ^pkgdown$
 ^data-raw$
 ^\.github$
+^\.claude$
+^\.netlify$
+^\.DS_Store$
+\.DS_Store$
+^man/figures/og-image\.png$
+^cran-comments\.md$
