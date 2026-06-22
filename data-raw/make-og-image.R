@@ -38,7 +38,7 @@ canvas <- image_composite(
 )
 canvas <- image_annotate(
   canvas,
-  "Every Rick Steves' Europe episode,\nas a tidy dataset for teaching.",
+  "Every Rick Steves' Europe episode,\nas a tidy dataset in R.",
   gravity = "northwest", location = sprintf("+%d+%d", mx, 350L),
   size = 38, color = ink, font = "Helvetica"
 )
