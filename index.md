@@ -26,6 +26,15 @@ keeping with Rick’s long-standing commitment to education.
 
 ## Installation
 
+Install the released version from CRAN:
+
+``` r
+
+install.packages("steves")
+```
+
+Or the development version from GitHub:
+
 ``` r
 
 # install.packages("pak")
