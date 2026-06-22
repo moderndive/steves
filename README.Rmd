@@ -14,9 +14,11 @@ knitr::opts_chunk$set(
 # steves <img src="man/figures/logo.png" align="right" height="139" alt="steves package hex sticker" />
 
 <!-- badges: start -->
-[![CRAN status](https://www.r-pkg.org/badges/version/steves)](https://CRAN.R-project.org/package=steves)
 [![R-CMD-check](https://github.com/moderndive/steves/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/moderndive/steves/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
+<!-- Re-add once on CRAN:
+[![CRAN status](https://www.r-pkg.org/badges/version/steves)](https://CRAN.R-project.org/package=steves)
+-->
 
 This package is an ode to a wonderfully informative and fun host in Rick Steves. It's a tidy snapshot of every episode of the public-television travel series
 *Rick Steves' Europe* (2000–2025), enriched for teaching introductory data

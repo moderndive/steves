@@ -3,9 +3,11 @@
 
 <!-- badges: start -->
 
-[![CRAN status](https://www.r-pkg.org/badges/version/steves)](https://CRAN.R-project.org/package=steves)
 [![R-CMD-check](https://github.com/moderndive/steves/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/moderndive/steves/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
+<!-- Re-add once on CRAN:
+[![CRAN status](https://www.r-pkg.org/badges/version/steves)](https://CRAN.R-project.org/package=steves)
+-->
 
 This package is an ode to a wonderfully informative and fun host in Rick
 Steves. It’s a tidy snapshot of every episode of the public-television
