@@ -1,4 +1,4 @@
-url: https://ismayc.github.io/steves/
+url: https://moderndive.github.io/steves/
 template:
   bootstrap: 5
   bslib:
@@ -73,7 +73,7 @@ footer:
     - built_with
   components:
     package: |
-      Source: <https://github.com/ismayc/steves>.
+      Source: <https://github.com/moderndive/steves>.
       Episode metadata © Rick Steves' Europe; ratings © IMDB.com, Inc.,
       used under the IMDB non-commercial license.
 development:

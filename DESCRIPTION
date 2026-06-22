@@ -28,9 +28,9 @@ Suggests:
     maps,
     rmarkdown,
     tibble
-URL: https://ismayc.github.io/steves/,
-    https://github.com/ismayc/steves
-BugReports: https://github.com/ismayc/steves/issues
+URL: https://moderndive.github.io/steves/,
+    https://github.com/moderndive/steves
+BugReports: https://github.com/moderndive/steves/issues
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
 VignetteBuilder: knitr

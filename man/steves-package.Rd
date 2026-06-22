@@ -11,9 +11,9 @@ Tidy snapshot of every episode of the public-television travel series 'Rick Stev
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://ismayc.github.io/steves/}
-  \item \url{https://github.com/ismayc/steves}
-  \item Report bugs at \url{https://github.com/ismayc/steves/issues}
+  \item \url{https://moderndive.github.io/steves/}
+  \item \url{https://github.com/moderndive/steves}
+  \item Report bugs at \url{https://github.com/moderndive/steves/issues}
 }
 
 }

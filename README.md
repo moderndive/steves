@@ -3,7 +3,7 @@
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/ismayc/steves/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ismayc/steves/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/moderndive/steves/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/moderndive/steves/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 This package is an ode to a wonderfully informative and fun host in Rick
@@ -31,7 +31,7 @@ with Rick’s long-standing commitment to education.
 
 ``` r
 # install.packages("pak")
-pak::pak("ismayc/steves")
+pak::pak("moderndive/steves")
 ```
 
 ## Usage
