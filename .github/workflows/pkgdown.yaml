@@ -45,3 +45,17 @@ jobs:
           clean: false
           branch: gh-pages
           folder: docs
+
+      - name: Deploy to Netlify 🌐
+        if: github.event_name != 'pull_request'
+        uses: nwtgck/actions-netlify@v3.0
+        with:
+          publish-dir: docs
+          production-deploy: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Deploy ${{ github.sha }} from GitHub Actions"
+          enable-pull-request-comment: false
+          enable-commit-comment: false
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
