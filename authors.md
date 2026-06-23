@@ -7,7 +7,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/moderndive/steves/blob/main/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/moderndive/steves/blob/v0.1.1/DESCRIPTION)
 
 Ismay C (2026). *steves: Rick Steves' Europe Episodes for Teaching Data
 Analysis*. R package version 0.1.1,
