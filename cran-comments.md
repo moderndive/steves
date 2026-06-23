@@ -2,11 +2,17 @@
 
 0 errors | 0 warnings | 1 note
 
-* This is a new release.
+* This is a new submission.
 
 ## Notes
 
 * "New submission" is the expected note for a first submission.
+
+* The possibly misspelled words flagged in DESCRIPTION (IMDB, Steves,
+  geocoded) are all spelled correctly: "IMDB" is the Internet Movie
+  Database, "Steves" is the surname in the series title *Rick Steves'
+  Europe*, and "geocoded" is the standard term for the destination
+  coordinates derived for the dataset.
 
 ## Data provenance
 

@@ -7,3 +7,6 @@ inst/doc
 docs/
 README.html
 .claude/
+
+# Local Netlify folder
+.netlify
