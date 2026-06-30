@@ -2,11 +2,9 @@
 
 0 errors | 0 warnings | 1 note
 
-* This is a new submission.
+* This is an update to a package already on CRAN.
 
 ## Notes
-
-* "New submission" is the expected note for a first submission.
 
 * The possibly misspelled words flagged in DESCRIPTION (IMDB, Steves,
   geocoded) are all spelled correctly: "IMDB" is the Internet Movie

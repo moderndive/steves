@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/moderndive/steves/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/moderndive/steves/actions/workflows/R-CMD-check.yaml)
 [![CRAN status](https://www.r-pkg.org/badges/version/steves)](https://CRAN.R-project.org/package=steves)
+[![CRAN downloads](https://cranlogs.r-pkg.org/badges/grand-total/steves)](https://CRAN.R-project.org/package=steves)
 <!-- badges: end -->
 
 This package is an ode to a wonderfully informative and fun host in Rick Steves. It's a tidy snapshot of every episode of the public-television travel series

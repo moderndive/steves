@@ -4,10 +4,11 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/moderndive/steves/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/moderndive/steves/actions/workflows/R-CMD-check.yaml)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/steves)](https://CRAN.R-project.org/package=steves)
+[![CRAN
+downloads](https://cranlogs.r-pkg.org/badges/grand-total/steves)](https://CRAN.R-project.org/package=steves)
 <!-- badges: end -->
-<!-- Re-add once on CRAN:
-[![CRAN status](https://www.r-pkg.org/badges/version/steves)](https://CRAN.R-project.org/package=steves)
--->
 
 This package is an ode to a wonderfully informative and fun host in Rick
 Steves. It’s a tidy snapshot of every episode of the public-television
@@ -24,11 +25,12 @@ or `leaflet::addMarkers()`.
 
 > Source: Rick Steves’ Europe (compiled dataset).
 >
-> Note: This dataset was created from public sources for teaching purposes
-> and is not an official or verified Rick Steves’ Europe dataset.
+> Note: This dataset was created from public sources for teaching
+> purposes and is not an official or verified Rick Steves’ Europe
+> dataset.
 
-Used with the kind permission of the Rick Steves’ Europe team, in keeping
-with Rick’s long-standing commitment to education.
+Used with the kind permission of the Rick Steves’ Europe team, in
+keeping with Rick’s long-standing commitment to education.
 
 ## Installation
 
@@ -44,8 +46,6 @@ Install the development version from GitHub:
 # install.packages("pak")
 pak::pak("moderndive/steves")
 ```
-
-
 
 ## Usage
 
@@ -139,6 +139,6 @@ is © IMDB.com, Inc. and used under their non-commercial license. Episode
 images and summaries are © Rick Steves’ Europe and used under fair-use
 for research and education.
 
-This dataset is compiled from public sources for teaching purposes and is
-not an official or verified Rick Steves’ Europe dataset. It is shared with
-the permission of the Rick Steves’ Europe team.
+This dataset is compiled from public sources for teaching purposes and
+is not an official or verified Rick Steves’ Europe dataset. It is shared
+with the permission of the Rick Steves’ Europe team.
