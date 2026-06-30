@@ -32,6 +32,12 @@ with Rick’s long-standing commitment to education.
 
 ## Installation
 
+Install the released version with:
+
+``` r
+install.packages("steves")
+```
+
 Install the development version from GitHub:
 
 ``` r
@@ -39,11 +45,7 @@ Install the development version from GitHub:
 pak::pak("moderndive/steves")
 ```
 
-Once on CRAN, you’ll be able to install the released version with:
 
-``` r
-install.packages("steves")
-```
 
 ## Usage
 
