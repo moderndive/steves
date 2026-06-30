@@ -4,6 +4,7 @@
 
 CRAN release: 2026-06-30
 
+- First release on CRAN.
 - Added attribution and a clarifying note across the README, dataset
   documentation, `DESCRIPTION`, and the get-started vignette: the
   dataset is compiled from public sources for teaching purposes, is not
